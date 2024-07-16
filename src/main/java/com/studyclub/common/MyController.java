@@ -1,4 +1,4 @@
-package com.semiprj.common;
+package com.studyclub.common;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +10,7 @@ public class MyController {
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     @ResponseBody
     public String test() {
+
         return "index";
     }
 }

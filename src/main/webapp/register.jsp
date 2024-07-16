@@ -49,7 +49,7 @@
         <div class="login-form">
             <!-- logo-login -->
             <div class="logo-login">
-                <a href="index.html"><img src="assets/img/logo/loder.png" alt=""></a>
+                <a href="index.jsp"><img src="assets/img/logo/loder.png" alt=""></a>
             </div>
             <h2>Registration Here</h2>
 
@@ -73,7 +73,7 @@
                 <input type="submit" name="submit" value="Registration">
             </div>
             <!-- Forget Password -->
-            <a href="login.html" class="registration">login</a>
+            <a href="login.jsp" class="registration">login</a>
         </div>
     </form>
     <!-- /end login form -->

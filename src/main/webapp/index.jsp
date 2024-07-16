@@ -1,5 +1,10 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%--<%@ include file="header.jsp" %>--%>
+<%@ page isELIgnored="false" %>
+<!DOCTYPE html>
+<html class="no-js" lang="kor">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -50,7 +55,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.jsp"><img src="assets/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -59,20 +64,20 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-<!--                                                <li class="active" ><a href="index.html"></a></li>-->
-                                                <li><a href="courses.html">수강신청</a></li>
-                                                <li><a href="about.html">회의하기</a></li>
+<!--                                                <li class="active" ><a href="index.jsp"></a></li>-->
+                                                <li><a href="courses.jsp">수강신청</a></li>
+                                                <li><a href="about.jsp">회의하기</a></li>
                                                 <li><a href="#">게시판</a>
                                                     <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
+                                                        <li><a href="blog.jsp">Blog</a></li>
+                                                        <li><a href="blog_details.jsp">Blog Details</a></li>
+                                                        <li><a href="elements.jsp">Element</a></li>
                                                     </ul>
                                                 </li>
-<!--                                                <li><a href="contact.html">Contact</a></li>-->
+<!--                                                <li><a href="contact.jsp">Contact</a></li>-->
                                                 <!-- Button -->
                                                 <li class="button-header margin-left "><a href="#" class="btn">회원가입</a></li>
-                                                <li class="button-header"><a href="login.html" class="btn btn3">로그인</a></li>
+                                                <li class="button-header"><a href="login.jsp" class="btn btn3">로그인</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -460,7 +465,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-12">
                         <div class="section-tittle text-center mt-20">
-                            <a href="courses.html" class="border-btn">View More Subjects</a>
+                            <a href="courses.jsp" class="border-btn">View More Subjects</a>
                         </div>
                     </div>
                 </div>
@@ -610,7 +615,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.jsp"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

@@ -18,8 +18,6 @@
 	http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop.xsd
 	">
-
-
     <!--
     Oracle ID/PW   (src/main/resources/oracle.properties )
     MyBatis 설정파일 (src/main/resources/mybatis-context.xml)
@@ -28,13 +26,11 @@
     MyBatis 매퍼인터페이스.java가 놓일 패키지 생성 : com.kosta.semi.mappers
      -->
 
-
-
     <!-- ===============================[어노테이션 기반으로 동작]================================== -->
     <!--  어노테이션 기반 -->
     <mvc:annotation-driven />
     <!-- 적용 대상 패키지 -->
-    <context:component-scan base-package="com.semiprj.common" />
+    <context:component-scan base-package="com.studyclub"/>
 
     <!-- =============================== 자바의 classpth: 자바 코드에서 필요한 설정파일들 넣어놓는 위치
          /src/main/resources/**  ${webappRoot}/resources directory -->
@@ -47,20 +43,15 @@
     </bean>
 
 
-
-
-
-
-
     <!-- ################################################################################  -->
     <!-- =============================== datasource : 프로퍼티 파일을 사용한 형태 -->
-   <!-- <context:property-placeholder location="classpath:oracle.properties" />
+    <context:property-placeholder location="classpath:oracle.properties" />
     <bean id="MY_tomcat_ds" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" 	value="${lec.driver}" />
         <property name="url" 				value="${lec.url}" />
         <property name="username" 			value="${lec.username}" />
         <property name="password" 			value="${lec.userpw}" />
-    </bean>-->
+    </bean>
     <!-- ===================================================
        트랜잭션 관련 설정
        - annotation-driven :: txManager(Datasource) - @Transactional
@@ -69,23 +60,24 @@
                                                  : pointcut(where)
      ======================================================= -->
     <!-- txManager [ DataSource ... sqlSession ] 관리를 위한 매니저 설정 -->
- <!--   <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+ <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="myDS_CONSOL_PRINT" />
-    </bean>-->
+    </bean>
 
     <!-- annotation 기반 설정 시  @Transactional이 붙은 메서드만 관리  -->
     <!--<tx:annotation-driven transaction-manager="txManager"/>-->
 
     <!-- XML 기반 설정 시 : @Transactional 이외의 메서드 관리  -->
- <!--   <tx:advice id="txAdvice" transaction-manager="txManager">
+  <tx:advice id="txAdvice" transaction-manager="txManager">
         <tx:attributes>
             <tx:method name="*" rollback-for="Exception"/>
         </tx:attributes>
     </tx:advice>
+
     <aop:config>
-        <aop:pointcut id="cut" expression="execution(* com.kosta..*Impl.*(..))"/>
+        <aop:pointcut id="cut" expression="execution(* com.studyclub..*Impl.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="cut" />
-    </aop:config>-->
+    </aop:config>
 
 
 
@@ -97,17 +89,17 @@
          MyBatis 매퍼파일 (src/main/resources/mappers/  *-map.xml)
          MyBatis SQL로그 (src/main/resources/log4j.xml)
     -->
-    <!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="myDS_CONSOL_PRINT" />
         <property name="mapperLocations" value="classpath:mappers/*-map.xml" />
         <property name="configLocation"  value="classpath:mybatis-context.xml"/>
     </bean>
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory" />
-    </bean>-->
+    </bean>
 
     <!-- =============================== MYBATIS 콘솔 로그 출력 : log4jdbc-remix.jar -->
-   <!-- <bean id="myDS_CONSOL_PRINT" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+   <bean id="myDS_CONSOL_PRINT" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
         <constructor-arg ref="MY_tomcat_ds" />
         <property name="logFormatter">
             <bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
@@ -115,14 +107,14 @@
                 <property name="sqlPrefix"   value=""/>
             </bean>
         </property>
-    </bean>-->
+    </bean>
 
     <!-- =============================== MyBtis + Mapper인터페이스
 	     MapperScannerConfigurer : @Mapper 찾기 + sqlSessionFactory  -->
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.kosta.semi.mappers"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-    </bean>-->
+    </bean>
     <!-- ################################################################################  -->
 
 </beans>

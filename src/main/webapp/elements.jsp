@@ -43,7 +43,7 @@
 						<!-- Logo -->
 						<div class="col-xl-2 col-lg-2">
 							<div class="logo">
-								<a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+								<a href="index.jsp"><img src="assets/img/logo/logo.png" alt=""></a>
 							</div>
 						</div>
 						<div class="col-xl-10 col-lg-10">
@@ -52,20 +52,20 @@
 								<div class="main-menu d-none d-lg-block">
 									<nav>
 										<ul id="navigation">                                                                                          
-											<li class="active" ><a href="index.html">Home</a></li>
-											<li><a href="courses.html">Courses</a></li>
-											<li><a href="about.html">About</a></li>
+											<li class="active" ><a href="index.jsp">Home</a></li>
+											<li><a href="courses.jsp">Courses</a></li>
+											<li><a href="about.jsp">About</a></li>
 											<li><a href="#">Blog</a>
 												<ul class="submenu">
-													<li><a href="blog.html">Blog</a></li>
-													<li><a href="blog_details.html">Blog Details</a></li>
+													<li><a href="blog.jsp">Blog</a></li>
+													<li><a href="blog_details.jsp">Blog Details</a></li>
 													<li><a href="elements.html">Element</a></li>
 												</ul>
 											</li>
-											<li><a href="contact.html">Contact</a></li>
+											<li><a href="contact.jsp">Contact</a></li>
 											<!-- Button -->
 											<li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
-											<li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li>
+											<li class="button-header"><a href="login.jsp" class="btn btn3">Log in</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -95,7 +95,7 @@
 									<!-- breadcrumb Start-->
 									<nav aria-label="breadcrumb">
 										<ol class="breadcrumb">
-											<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+											<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
 											<li class="breadcrumb-item"><a href="#">Elements</a></li> 
 										</ol>
 									</nav>
@@ -585,7 +585,7 @@
 														</div>
 														<div class="input-group-icon mt-10">
 															<div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-															<div class="form-select" id="default-select"">
+															<div class="form-select" id="default-select">
 																<select>
 																	<option value=" 1">City</option>
 																	<option value="1">Dhaka</option>
@@ -597,7 +597,7 @@
 														</div>
 														<div class="input-group-icon mt-10">
 															<div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
-															<div class="form-select" id="default-select"">
+															<div class="form-select">
 																<select>
 																	<option value=" 1">Country</option>
 																	<option value="1">Bangladesh</option>
@@ -656,7 +656,7 @@
 													</div>
 													<div class="single-element-widget mt-30">
 														<h3 class="mb-30">Selectboxes</h3>
-														<div class="default-select" id="default-select"">
+														<div class="default-select">
 															<select>
 																<option value=" 1">English</option>
 																<option value="1">Spanish</option>
@@ -760,7 +760,7 @@
 														<div class="single-footer-caption mb-30">
 															<!-- logo -->
 															<div class="footer-logo mb-25">
-																<a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+																<a href="index.jsp"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
 															</div>
 															<div class="footer-tittle">
 																<div class="footer-pera">
