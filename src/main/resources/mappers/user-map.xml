@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.semiprj.mapper.UserMapper">
+
+	<!-- User Mapper -->
+	<resultMap id="userResultMap" type="com.semiprj.model.User">
+		<id property="userSeq" column="USER_SEQ" />
+		<result property="userEmail" column="USER_EMAIL" />
+		<result property="userPw" column="USER_PW" />
+		<result property="userNickname" column="USER_NICKNAME" />
+		<result property="userAccessToken" column="USER_ACCESSTOKEN" />
+		<result property="userRefreshToken" column="USER_REFRESHTOKEN" />
+		<result property="userDate" column="USER_DATE" />
+	</resultMap>
+
+
+	<!-- User Login -->
+	<select id="userLogin" parameterType="com.semiprj.model.User" resultMap="userResultMap">
+		SELECT
+		user_seq, user_email, user_pw, user_nickname, user_accessToken, user_refreshToken, user_date
+		FROM
+		clubuser
+		WHERE
+		user_email = #{userEmail} AND user_pw = #{userPw}
+	</select>
+
+	<select id="getAllUsers" resultMap="userResultMap">
+		SELECT
+		user_seq, user_email, user_pw, user_nickname, user_accessToken, user_refreshToken, user_date
+		FROM
+		clubuser
+	</select>
+
+</mapper>
