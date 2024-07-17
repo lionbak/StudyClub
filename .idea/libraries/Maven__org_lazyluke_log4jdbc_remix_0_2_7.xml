@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.lazyluke:log4jdbc-remix:0.2.7" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.lazyluke" artifactId="log4jdbc-remix" version="0.2.7" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/lazyluke/log4jdbc-remix/0.2.7/log4jdbc-remix-0.2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/lazyluke/log4jdbc-remix/0.2.7/log4jdbc-remix-0.2.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/lazyluke/log4jdbc-remix/0.2.7/log4jdbc-remix-0.2.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
